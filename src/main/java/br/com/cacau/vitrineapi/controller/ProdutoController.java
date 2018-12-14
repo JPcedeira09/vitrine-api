@@ -18,6 +18,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/api/produto/")
+/**
+ * 
+ * @author joaopaulo
+ * API Para a Sr. Cacau gerenciar sua vitrine virtual
+ */
 public class ProdutoController {
 
 	@Autowired
