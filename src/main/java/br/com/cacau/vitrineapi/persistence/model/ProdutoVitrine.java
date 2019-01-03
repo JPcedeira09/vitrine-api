@@ -7,8 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.PostUpdate;
 import javax.persistence.Table;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.com.cacau.vitrineapi.schedulers.NotificacaoDeHaProduto;
 import lombok.Data;
 import lombok.ToString;
 
@@ -60,6 +64,11 @@ public class ProdutoVitrine implements Serializable{
 		super();
 	}  
 	
-	
-    
+	@Autowired
+	NotificacaoDeHaProduto notificacaoDeHaProduto;
+	    
+    @PostUpdate
+    public void posUpdateProdutoVitrine() {
+    	notificacaoDeHaProduto.avisarCliente();
+		}	
 }

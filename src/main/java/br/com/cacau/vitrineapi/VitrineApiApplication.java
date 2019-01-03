@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import br.com.cacau.vitrineapi.persistence.model.ProdutoVitrine;
 import br.com.cacau.vitrineapi.persistence.model.Vitrine;
@@ -13,6 +14,7 @@ import br.com.cacau.vitrineapi.persistence.repository.ProdutoRepository;
 import br.com.cacau.vitrineapi.persistence.repository.VitrineRepository;
 
 @SpringBootApplication
+@EnableScheduling
 public class VitrineApiApplication {
 
 	@Autowired
